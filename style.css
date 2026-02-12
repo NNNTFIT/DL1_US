@@ -68,7 +68,7 @@ body{
     -webkit-mask-size: auto 100%;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    background-color: black;
+    background-color: #8b8b8b;
 }
 .btn{
     cursor: pointer;
@@ -80,6 +80,8 @@ body{
     border: 0;
     z-index: 1;
     transition: all 1s ease;
+    font-weight: bold;
+    color: #8b8b8b;
 }
 .box-active{
     height: 100%;
@@ -149,7 +151,7 @@ body{
     -webkit-mask-size: auto 100%;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    background-color: black;
+    background-color: #8b8b8b;
 }
 .active .btn-ico{
     background-color: #3b82f6;
