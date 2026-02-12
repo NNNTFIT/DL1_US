@@ -84,9 +84,9 @@ body{
     height: 100%;
     border-radius: 15px;
     position: absolute;
+    left: 0;
     transition: all 0.5s ease;
     z-index: 0;
-    transition: all 0.5s ease;
 }
 .container-1 .box-active,
 .container-5 .box-active{
