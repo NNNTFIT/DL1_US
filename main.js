@@ -1,6 +1,6 @@
 window.addEventListener("load", () => { //này để cho mấy kia chạy xog hết rồi mới chạy tránh bị lỗi cái cục kia bị méo
   const menus = document.querySelectorAll(".menu");
-  
+
   menus.forEach((menu) => {
     const btns = menu.querySelectorAll(".btn");
     const boxActive = menu.querySelector(".box-active");
@@ -19,8 +19,7 @@ window.addEventListener("load", () => { //này để cho mấy kia chạy xog h�
     }
 
     const activeBtn = menu.querySelector(".btn.active");
-      run(activeBtn);
-    
+    run(activeBtn);
 
     btns.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -30,14 +29,13 @@ window.addEventListener("load", () => { //này để cho mấy kia chạy xog h�
       });
     });
 
+    
+    window.addEventListener("resize", () => { // này để khi màn hình co lại hay giãn ra thì nó update lại
+      const update = menu.querySelector(".btn.active");
+      run(update);
 
 
-
-
-    // này để khi màn hình co lại hay giãn ra thì nó update lại
-    window.addEventListener("resize", () => {
-        const update = menu.querySelector(".btn.active");
-          run(update)
+      
     });
   });
 });
