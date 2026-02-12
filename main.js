@@ -1,4 +1,5 @@
 const menus = document.querySelectorAll(".menu");
+
 menus.forEach((menu) => {
   const btns = menu.querySelectorAll(".btn");
   const boxActive = menu.querySelector(".box-active");
@@ -16,17 +17,20 @@ menus.forEach((menu) => {
     }
   }
 
-
   const activeBtn = menu.querySelector(".btn.active");
-  if (activeBtn) {
-    run(activeBtn);
-  }
-  
+  run(activeBtn);
+
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
       menu.querySelector(".active")?.classList.remove("active");
       btn.classList.add("active");
       run(btn);
     });
+  });
+
+  // này để khi màn hình co lại hay giãn ra thì nó update lại
+  window.addEventListener("resize", () => {
+    const update = menu.querySelector(".btn.active");
+    run(update);
   });
 });
