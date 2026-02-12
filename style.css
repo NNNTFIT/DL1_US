@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:  50px;
+    align-items: center;
+    background-color: #f4f4fc;
+    padding: 50px 0;
+}
+.container{
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.num{
+    width: 40px;
+    height: 40px;
+    background-color: #e8e8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu{
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.list{
+    cursor: pointer;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f2;
+    border-radius: 999px;
+}
+.list .ico-list{
+    height: 20px;
+    width: 20px;
+    -webkit-mask-image: url(list.svg);
+    -webkit-mask-size: auto 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    background-color: black;
+}
+.btn{
+    cursor: pointer;
+    padding: 12px 15px;
+    font-size: 12px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 0;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.box-active{
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    transition: all 0.5s ease;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+.container-1 .box-active,
+.container-5 .box-active{
+    background-color: #e5f2f9;
+}
+.container-1 .active{
+    color: #3b82f6;
+}
+.container-2 .box-active{
+    background:linear-gradient(90deg, #4facfe, #2b6cf6);
+}
+.container-2 .active{
+    color: white;
+}
+.container-3 .btn{
+    transition: all 0.5s ease;
+}
+.container-3 .box-active{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #3b82f6;
+    position: absolute;
+    bottom: 5px;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+.container-3 .active{
+    color: #3b82f6;
+}
+.container-4 .btn,
+.container-5 .btn,
+.container-6 .btn,
+.container-7 .btn,
+.container-8 .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 12px 15px;
+}
+.container-4 .menu,
+.container-6 .menu{
+    padding-bottom: 0;
+}
+.container-4 .btn{
+    flex-direction: column;
+    padding: 12px 20px 24px 12px;
+}
+.container-6 .btn{
+    padding: 12px 20px 24px 12px;
+}
+.btn-text{
+    transition: all 1s ease;
+}
+.btn-ico{
+    width: 20px;
+    height: 20px;
+    -webkit-mask-size: auto 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    background-color: black;
+}
+.active .btn-ico{
+    background-color: #3b82f6;
+}
+.btn.active .btn-text{
+    color: #3b82f6;
+}
+.container-4 .box-active,
+.container-6 .box-active{
+    height: 3px;
+    bottom: 0;
+    background-color: #3b82f6;
+}
+.btn-ico-all{
+    -webkit-mask-image: url(all.svg);
+}
+.btn-ico-new{
+    -webkit-mask-image: url(new.svg);
+}
+.btn-ico-trend{
+    -webkit-mask-image: url(trending.svg);
+}
+.btn-ico-heart{
+    -webkit-mask-image: url(heart.svg);
+}
+.btn-ico-follow{
+    -webkit-mask-image: url(follow.svg);
+}
+.btn-ico-sub{
+    -webkit-mask-image: url(sub.svg);
+}
+.container-7 .menu-container{
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: #f3f4f8;
+    border-radius: 15px;
+}
+.container-7 .box-active{
+    background-color: white;
+    height: calc(100% - 10px);
+}
+.container-8 .menu{
+    padding: 0px 0px 12px 0px;
+    overflow: hidden;
+}
+.container-8 .menu-container{
+    background-color: #f3f4f8;
+    width: 100%;
+    padding-top: 12px;
+}
+.container-8 .box-active{
+    background-color: white;
+    height: calc(100% - 10px);
+    border-radius: 10px 10px 0px 0px;
+}
